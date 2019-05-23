@@ -1,0 +1,24 @@
+table {
+  box-sizing: border-box;
+  width: 300px;
+  text-align: left;
+  border: 1px solid gray;
+}
+
+.searchbar {
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid gray;
+  width: 300px;
+  padding-top: 20px;
+} 
+
+table tbody th {
+  text-align: center;
+  background: gray;
+} 
+
+#root12_ > div {
+  display: grid;
+  justify-content: center;
+}
