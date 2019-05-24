@@ -29,7 +29,7 @@ class ProductTable extends React.Component {
     const inStockOnly = this.props.inStockOnly;
 
     const products = this.props.products;
-    const rows = [];
+    let rows = [];
 
     // Sort products (by filterText & inStockOnly)
     const filterTextProducts = products.filter(product => product.name.toLowerCase().includes(filterText.toLowerCase())); 
@@ -57,13 +57,8 @@ class ProductTable extends React.Component {
           key={product.name} />
         ); 
       })
-  
-      // Merge all elements in arrays in categoryArrays to the rows array
-      categoryArrays.forEach(array => {
-        if(array) {
-          array.forEach(e => rows.push(e))
-        }
-      });
+      // Refer rows to categoryArrays
+      rows = categoryArrays;
     }
 
     if(inStockOnly) { // for inStockOnly products
